@@ -17,7 +17,7 @@ bool color =  false;
         children: <Widget>[
           Center(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(top:50.0,),
               child: Container(
                 color: Colors.blue[50],
                 child: ListTile(
@@ -27,7 +27,7 @@ bool color =  false;
                     textScaleFactor: 1.5,
                   ),
                   trailing: color ?  const Icon(Icons.favorite_border): const Icon(Icons.favorite),
-                  subtitle: color ?  const Text('This is subtitle') :  const Text('This is Not subtitle'),
+                  subtitle: color == false ?  const Text('Favourite') :  const Text('Not Favourite'),
                   selected: true,
                   onTap: () {
                     setState(() {
